@@ -1,0 +1,179 @@
+@font-face {
+  font-family: "vazir";
+  src: url("./fonts/Vazir-Variable.eot");
+  src: url("./fonts/Vazir-Variable.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/Vazir-Variable.woff2") format("woff2"), url("./fonts/Vazir-Variable.woff") format("woff"),
+    url("./fonts/Vazir-Variable.ttf") format("truetype");
+}
+* {
+  box-sizing: border-box;
+  font-family: "vazir";
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+body {
+  position: relative;
+}
+
+.table-container {
+  box-shadow: 0 1.6px 1.2px -10px rgba(0, 0, 0, 0.039), 0 3.4px 2.7px -10px rgba(0, 0, 0, 0.047),
+    0 5.8px 4.6px -10px rgba(0, 0, 0, 0.052), 0 8.7px 6.9px -10px rgba(0, 0, 0, 0.057),
+    0 12.5px 10px -10px rgba(0, 0, 0, 0.062), 0 17.7px 14.2px -10px rgba(0, 0, 0, 0.068),
+    0 25.1px 20.1px -10px rgba(0, 0, 0, 0.075), 0 36.5px 29.2px -10px rgba(0, 0, 0, 0.082),
+    0 56.3px 45px -10px rgba(0, 0, 0, 0.091), 0 100px 80px -10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+thead {
+  background-color: #72147e;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+}
+
+tbody {
+  font-size: 1.25rem;
+  background-color: whitesmoke;
+}
+
+.tfooter {
+  background-color: #ff5200;
+  font-size: 1.5rem;
+  color: white;
+  height: 5rem;
+  border: none;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.tfooter > img {
+  width: 2rem;
+}
+
+.operation {
+  background-color: #f21170;
+  color: white;
+  border-radius: 5px;
+  border: none;
+}
+
+.operation > div {
+  width: 2rem;
+}
+
+/* overlay and forms */
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  z-index: 5;
+  display: none;
+}
+
+.add-form,.edit-form {
+  position: absolute;
+  width: 35rem;
+  min-height: 40rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  display: none;
+  border-radius: 1rem;
+}
+
+.add-header {
+  background-color: #72147e;
+  color: white;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  height: 5rem;
+}
+
+.inputs-container > div > input {
+  height: 3rem;
+  font-size: 1.25rem;
+  border: rgb(173, 173, 173) 1px solid;
+  outline: none;
+}
+
+.inputs-container > div > input:focus {
+  border: #fa9905 1px solid;
+}
+
+.inputs-container > div > input.border-error {
+  border: red 3px solid;
+}
+
+small {
+  color: red;
+}
+
+input[id="fname"],
+input[id="lname"],
+input[id="fname-e"],
+input[id="lname-e"] {
+  direction: rtl;
+  text-align: right;
+}
+
+.inputs-container > button {
+  border: none;
+  color: white;
+  background-color: #f21170;
+  font-size: 1.5rem;
+}
+
+.close-modal,.close-modal-e {
+  width: 2.5rem;
+  position: absolute;
+  right: 2rem;
+  background-color: transparent;
+  border: none;
+}
+
+.inputs-container > button > div {
+  width: 2rem;
+}
+
+.yes-no-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30rem;
+  height: 10rem;
+  background-color: white;
+  z-index: 10;
+  border-radius: 1rem;
+}
+
+.yes,.no{
+  border: none;
+  background-color: #f21170;
+  color: white;
+  font-size: 1.25rem;
+}
+
+
+
+.showed {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
